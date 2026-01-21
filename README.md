@@ -305,9 +305,9 @@ User clicks "Apply"
 ┌─────────────────────────────────────┐
 │        CONFIRMATION POPUP           │
 │                                     │
-│  "Did you apply to [Job] at [Co]?" │
+│  "Did you apply to [Job] at [Co]?"  │
 │                                     │
-│  [Yes, Applied] [No, Browsing]     │
+│  [Yes, Applied] [No, Browsing]      │
 │        [Applied Earlier]            │
 └─────────────────────────────────────┘
         │
