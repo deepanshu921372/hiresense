@@ -9,7 +9,7 @@ AI-powered job tracking platform with smart resume matching and intelligent appl
 
 ## Live Demo
 
-🔗 **[https://hiresense.vercel.app](https://hiresense.vercel.app)**
+🔗 **[AIHireSense](https://aihiresense.vercel.app)**
 
 ---
 
