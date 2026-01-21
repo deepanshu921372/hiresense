@@ -116,10 +116,9 @@ export async function POST(req: NextRequest) {
     let userContext = '';
     let dbUser = null;
 
-    // Reuse the firebaseUser from rate limit check if available
     if (authHeader?.startsWith('Bearer ')) {
       const token = authHeader.split('Bearer ')[1];
-      const firebaseUser = identifier !== 'anonymous' ? { uid: identifier } : await getUserFromToken(token);
+      const firebaseUser = await getUserFromToken(token);
 
       if (firebaseUser) {
         await connectDB();

@@ -110,8 +110,15 @@ export function formatPercentage(value: number): string {
   return `${Math.round(value)}%`;
 }
 
-export function formatSalary(min: number, max: number): string {
-  const formatK = (n: number) => (n >= 1000 ? `$${(n / 1000).toFixed(0)}k` : `$${n}`);
+export function formatSalary(min: number, max: number, currency = 'INR'): string {
+  const symbols: Record<string, string> = {
+    INR: '₹',
+    USD: '$',
+    EUR: '€',
+    GBP: '£',
+  };
+  const symbol = symbols[currency] || '₹';
+  const formatK = (n: number) => (n >= 1000 ? `${symbol}${(n / 1000).toFixed(0)}k` : `${symbol}${n}`);
   if (min === max) return formatK(min);
   return `${formatK(min)} - ${formatK(max)}`;
 }
